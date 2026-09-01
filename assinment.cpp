@@ -1,46 +1,55 @@
- 
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
-         class student 
+class Student
 {
-         public;
-         int roll_no;
-         'sting' name;  
+public:
+    int roll_no;
+    string name;
+    int marks;
 
-void Accept() 
-  {
+    void Accept()
+    {
+        cout << "Enter Roll number: ";
+        cin >> roll_no;
 
-         cout <<"Enter Roll number :";
-          cin >> roll_no;
+        cout << "Enter Name: ";
+        cin >> name;
 
-           cout << "Enter marks :";
-           cin >> marks;
+        cout << "Enter Marks: ";
+        cin >> marks;
+    }
 
-           }
-
-          void Result() {
-
-          if( marks>= 40) {
-              cout<< " Result : pass" << endl;
- }      else {
-              cout << " Result : Fail" << endl;
-
+    void Result()
+    {
+        if (marks >= 40)
+        {
+            cout << "Result: Pass" << endl;
         }
+        else
+        {
+            cout << "Result: Fail" << endl;
+        }
+    }
 
-         void display() {
-          cout << ".....DISPLAY RESULT....." << endl;
-          cout << "Roll number : " << roll_no << endl;
-          cout << "Name :" <<name << endl;
-          cout << "Mark :" << marks  << endl;
-          resul();
-   } 
- 
-int main(){
-       Student s;
-       s.Accept();
-       s.Display();
-     
-        return 0;
-   }
+    void Display()
+    {
+        cout << ".....DISPLAY RESULT....." << endl;
+        cout << "Roll number: " << roll_no << endl;
+        cout << "Name: " << name << endl;
+        cout << "Marks: " << marks << endl;
+
+        Result();
+    }
+};
+
+int main()
+{
+    Student s;
+
+    s.Accept();
+    s.Display();
+
+    return 0;
+}
